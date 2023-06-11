@@ -17,7 +17,7 @@ import navConfig from './config';
 
 // ----------------------------------------------------------------------
 
-const NAV_WIDTH = 280;
+const NAV_WIDTH = 200;
 
 const StyledAccount = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -50,13 +50,11 @@ export default function Nav({ openNav, onCloseNav }) {
     <Scrollbar
       sx={{
         height: 1,
-        '& .simplebar-content': { height: 1, display: 'flex', flexDirection: 'column' },
-      }}
+        '& .simplebar-content': { height: 1, display: 'flex', flexDirection: 'column' }      }}
     >
       <Box sx={{ px: 2.5, py: 3, display: 'inline-flex' }}>
         <Logo />
       </Box>
-
       <Box sx={{ mb: 5, mx: 2.5 }}>
         <Link underline="none">
           <StyledAccount>
@@ -74,7 +72,6 @@ export default function Nav({ openNav, onCloseNav }) {
           </StyledAccount>
         </Link>
       </Box>
-
       <NavSection data={navConfig} />
 
       <Box sx={{ flexGrow: 1 }} />

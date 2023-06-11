@@ -3,6 +3,7 @@ import { faker } from '@faker-js/faker';
 // @mui
 import { useTheme } from '@mui/material/styles';
 import { Grid, Container, Typography } from '@mui/material';
+import JobTitleCard from '../components/JobTitleCard';
 // components
 import Iconify from '../components/iconify';
 // sections
@@ -34,7 +35,13 @@ export default function DashboardAppPage() {
           Hi, Welcome back
         </Typography>
 
-        <Grid container spacing={3}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={6}>
+            <JobTitleCard />
+          </Grid>
+          <Grid item xs={12} sm={6} md={6}>
+            <JobTitleCard />
+          </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary title="Weekly Sales" total={714000} icon={'ant-design:android-filled'} />
           </Grid>
